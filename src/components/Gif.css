@@ -1,0 +1,48 @@
+li {
+    list-style: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+input[type=search] {
+    width: 40%;
+    transition: width 0.5s ease-in-out;
+    -webkit-transition: width 0.5s ease-in-out;
+}
+
+input[type=search] {
+    width: 90%;
+}
+
+.navbar {
+    color: #fff;
+}
+
+.header {
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+
+.links {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+}
+
+.link {
+    color: white;
+    list-style: none;
+}
+
+.footer-bottom {
+    position: fixed;
+    background: #333;
+    color: white;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
