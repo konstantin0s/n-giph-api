@@ -4,6 +4,15 @@
     height: 100%;
 }
 
+.s-gifs {
+    position: relative;
+    top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 100px;
+}
+
 .contain-form {
     position: relative;
     margin: auto;

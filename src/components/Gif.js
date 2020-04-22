@@ -5,11 +5,11 @@ import './Gif.css';
 
     return (
         <div className="child-gif">
-                               <li key={props.gif.id}>
-<img src={props.gif.images.downsized_large.url} />
-                <h3>Title: {props.gif.title}</h3>
+                 <li key={props.gif.id}>
+                <img src={props.gif.images.downsized_large.url} />
+                <h3>{props.gif.title}</h3>
                 <h5>Type: {props.gif.type}</h5>
-                <p>{props.gif.trending_datetime}</p>
+                <p>{props.gif.import_datetime}</p>
                     </li>
         </div>
     )

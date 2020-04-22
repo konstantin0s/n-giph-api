@@ -1,5 +1,12 @@
 .child-gif {
     position: relative;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.child-gif img {
+    width: 240px;
+    height: 240px;
 }
 
 li {
