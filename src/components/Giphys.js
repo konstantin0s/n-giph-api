@@ -44,7 +44,7 @@ require('dotenv');
 
         return (
             <div>
-                {/* <SearchPhotos onSearch={this.performSearch} /> */}
+                <SearchPhotos onSearch={this.performSearch} />
 
                 {
             (this.state.loading) ? <p>Loading</p> : 
