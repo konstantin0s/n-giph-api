@@ -4,7 +4,7 @@ import './Gif.css';
  function Gif(props) {
 
     return (
-        <div>
+        <div className="child-gif">
                                <li key={props.gif.id}>
 <img src={props.gif.images.downsized_large.url} />
                 <h3>Title: {props.gif.title}</h3>

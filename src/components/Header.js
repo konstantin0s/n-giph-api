@@ -8,17 +8,12 @@ import {Link} from 'react-router-dom';
         return (
 
             <React.Fragment>
-            <header className="header">
+            <header className="header" id="masthead">
                 <nav className="links">
                     <Link className="link" to="/">Home</Link>
                     <Link className="link" to="/giphy">Giphy</Link>
                 </nav>
             </header>
-            <div className="footer-bottom ">
-                <div className="container">
-                    <p className="pull-left"> 2020 Copyright © Giphs </p>
-                </div>
-            </div>
         </React.Fragment>
         )
     }
