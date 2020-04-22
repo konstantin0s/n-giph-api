@@ -6,10 +6,13 @@ import React, { Component } from 'react';
         searchText: ''
     }
 
+
     onSearchChange = e => {
         this.setState({
-            searchText: e.target.value
+            searchText: e.target.value,
+            term: e.target.value
         });
+        console.log(e.target.value)
     }
 
     handleSubmit = e => {
