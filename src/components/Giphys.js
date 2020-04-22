@@ -50,7 +50,7 @@ require('dotenv');
             (this.state.loading) ? <p>Loading</p> : 
        
 
-            this.state.giphy.map((gif) => (
+              giphy.map((gif) => (
  
                     <Gif key={gif.id} gif={gif} />
                 ))   } 
