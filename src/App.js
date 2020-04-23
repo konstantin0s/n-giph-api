@@ -18,7 +18,7 @@ class App extends Component {
 <div className="App">
       <Header />
    <Switch>
-   <Route exact path="/home" component={Home} />
+   <Route exact path="/" component={Home} />
     <Route exact path="/giphy" component={Giphys} />
     <Route exact
         path="/gif/:id" 

@@ -5,9 +5,6 @@ import Loading from './Loading';
 import './css/gifs.css';
 require('dotenv');
 
-const app_key = process.env.REACT_APP_API_KEY;
-const cors_url = process.env.REACT_APP_CORS_URL;
-
  class Giphys extends Component {
     constructor(props) {
         super(props);
@@ -50,7 +47,7 @@ const cors_url = process.env.REACT_APP_CORS_URL;
 
  searchhGiphs = (query) => {
 
-    axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${app_key}&limit=5`)
+    axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${process.env.REACT_APP_API_KEY}&limit=5`)
         .then(res => {
             console.log(res.data.data);
           const giphy = res.data.data;

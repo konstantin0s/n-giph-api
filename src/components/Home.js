@@ -4,8 +4,6 @@ import Gif from './Gif';
 import Loading from './Loading';
 import './css/home.css';
 
-const app_key = process.env.REACT_APP_API_KEY;
-const cors_url = process.env.REACT_APP_CORS_URL;
 
 class Home extends Component {
     constructor(props) {
@@ -19,7 +17,7 @@ class Home extends Component {
 
       listGiphs = (query = 'princess') => {
 
-        axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${app_key}&limit=15`)
+        axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${process.env.REACT_APP_API_KEY}&limit=15`)
             .then(res => {
                 console.log(res.data.data);
               const giphy = res.data.data;
