@@ -68,7 +68,7 @@ input[type=search] {
     margin-bottom: 3rem;
     transition: var(--ease);
     position: relative;
-    left: 6em;
+    left: 0em;
     top: 18px;
 }
 
@@ -83,6 +83,15 @@ input[type=search] {
 .link {
     color: white;
     list-style: none;
+}
+
+.MuiButton-label a {
+    text-decoration: none;
+}
+.MuiButton-label a:hover {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
 }
 
 .footer-bottom {
