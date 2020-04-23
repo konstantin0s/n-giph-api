@@ -20,6 +20,8 @@ const useStyles = makeStyles({
     },
   });
 
+  const app_key = process.env.REACT_APP_API_KEY;
+  const cors_url = process.env.REACT_APP_CORS_URL;
 
 class OneGif extends Component {
 constructor(props) {
@@ -32,7 +34,7 @@ constructor(props) {
 
 matchGiph = () => {
 
-    axios.get(`http://api.giphy.com/v1/gifs/${this.props.id}?api_key=${process.env.REACT_APP_API_KEY}`)
+    axios.get(`${cors_url}https://api.giphy.com/v1/gifs/${this.props.id}?api_key=${app_key}`)
         .then(res => {
             console.log(res.data.data);
           const gif = res.data.data;
