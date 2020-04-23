@@ -19,7 +19,7 @@ class Home extends Component {
 
       listGiphs = (query = 'princess') => {
 
-        axios.get(`${cors_url}https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${app_key}&limit=15`)
+        axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${app_key}&limit=15`)
             .then(res => {
                 console.log(res.data.data);
               const giphy = res.data.data;

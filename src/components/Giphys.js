@@ -50,7 +50,7 @@ const cors_url = process.env.REACT_APP_CORS_URL;
 
  searchhGiphs = (query) => {
 
-    axios.get(`${cors_url}https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${app_key}&limit=5`)
+    axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${app_key}&limit=5`)
         .then(res => {
             console.log(res.data.data);
           const giphy = res.data.data;

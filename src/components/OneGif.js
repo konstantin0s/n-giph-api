@@ -34,7 +34,7 @@ constructor(props) {
 
 matchGiph = () => {
 
-    axios.get(`${cors_url}https://api.giphy.com/v1/gifs/${this.props.id}?api_key=${app_key}`)
+    axios.get(`https://api.giphy.com/v1/gifs/${this.props.id}?api_key=${app_key}`)
         .then(res => {
             console.log(res.data.data);
           const gif = res.data.data;
