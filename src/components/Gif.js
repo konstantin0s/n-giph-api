@@ -43,7 +43,7 @@ const useStyles = makeStyles({
         </CardActionArea>
         <CardActions>
           <Button size="small" color="primary">
-            <Sharing id={prop.gif.id}/>
+            <Sharing id={props.gif.id}/>
           </Button>
        
           <Link className="linkx" id={props.gif.id} to={`/gif/${props.gif.id}`}>
