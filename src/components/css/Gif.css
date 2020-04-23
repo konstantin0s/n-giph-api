@@ -9,6 +9,10 @@
     height: 240px;
 }
 
+.child-gif h3 {
+    font-size: 1.3em;
+}
+
 li {
     list-style: none;
 }

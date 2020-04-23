@@ -1,16 +1,20 @@
 import React from 'react';
-import './Gif.css';
+import { Link } from "react-router-dom";
+import './css/Gif.css';
 
- function Gif(props) {
+ const Gif = (props) => {
 
     return (
         <div className="child-gif">
                  <li key={props.gif.id}>
-                <img src={props.gif.images.downsized_large.url} />
+                <img alt="gifff" src={props.gif.images.downsized_large.url} />
                 <h3>{props.gif.title}</h3>
-                <h5>Type: {props.gif.type}</h5>
+                <h5> {props.gif.username}</h5>
                 <p>{props.gif.import_datetime}</p>
                     </li>
+                    <Link className="linkz" id={props.gif.id} to={`/gif/${props.gif.id}`}>
+                   Red More..
+            </Link>
         </div>
     )
 }
