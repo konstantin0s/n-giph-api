@@ -19,11 +19,11 @@ class App extends Component {
       <Header />
       <Route exact path="/" component={Home} />
     <Route exact path="/giphy" component={Giphys} />
-    <Route
+    <Route exact
         path="/gif/:id" 
         render={request => {
           const id = request.match.params.id;
-          console.log(id);
+          // console.log(id);
           return <OneGif id={id} />;
         }}
       />
