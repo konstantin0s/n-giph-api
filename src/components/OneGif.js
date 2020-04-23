@@ -9,6 +9,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Sharing from './Sharing';
 
 const useStyles = makeStyles({
     root: {
@@ -46,6 +47,7 @@ componentDidMount() {
     this.matchGiph();
 }
 
+
 delayRender = () => {
     const {images, title, username, import_datetime} = this.state.gif;
     console.log(images, title, username);
@@ -67,10 +69,7 @@ delayRender = () => {
     </CardActionArea>
     <CardActions>
       <Button size="small" color="primary">
-        Share ?
-      </Button>
-      <Button size="small" color="primary">
-            The end
+<Sharing />
       </Button>
     </CardActions>
   </Card>
