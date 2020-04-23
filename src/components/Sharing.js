@@ -5,7 +5,7 @@ import 'react-sharingbuttons/dist/main.css';
 
 const Sharing = (props) => {
 
-    const url = `http://localhost:3000/gif/${props.id}`
+    const url = `https://gif-fig.herokuapp.com/gif/${props.id}`
     const shareText = 'Share this!'
   
     return (
