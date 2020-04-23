@@ -48,7 +48,7 @@ componentDidMount() {
 
 
 delayRender = () => {
-    const {images, title, username, import_datetime} = this.state.gif;
+    const { images, title, username, import_datetime, id  } = this.state.gif;
     console.log(images, title, username);
     const { isLoading} = this.state;
     if (!isLoading) {
@@ -68,7 +68,7 @@ delayRender = () => {
     </CardActionArea>
     <CardActions>
       <Button size="small" color="primary">
-<Sharing />
+<Sharing id={ id } />
       </Button>
     </CardActions>
   </Card>
