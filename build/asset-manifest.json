@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.ed7b92b7.chunk.css",
-    "main.js": "/static/js/main.e5a223ab.chunk.js",
-    "main.js.map": "/static/js/main.e5a223ab.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b8789e85.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b8789e85.js.map",
-    "static/css/2.cda14bce.chunk.css": "/static/css/2.cda14bce.chunk.css",
-    "static/js/2.c804698b.chunk.js": "/static/js/2.c804698b.chunk.js",
-    "static/js/2.c804698b.chunk.js.map": "/static/js/2.c804698b.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6781c5043a435527fe36253159905ebf.js": "/precache-manifest.6781c5043a435527fe36253159905ebf.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.cda14bce.chunk.css.map": "/static/css/2.cda14bce.chunk.css.map",
-    "static/css/main.ed7b92b7.chunk.css.map": "/static/css/main.ed7b92b7.chunk.css.map",
-    "static/js/2.c804698b.chunk.js.LICENSE.txt": "/static/js/2.c804698b.chunk.js.LICENSE.txt"
+    "main.css": "/n-giph-api/static/css/main.ed7b92b7.chunk.css",
+    "main.js": "/n-giph-api/static/js/main.8ad3e8aa.chunk.js",
+    "main.js.map": "/n-giph-api/static/js/main.8ad3e8aa.chunk.js.map",
+    "runtime-main.js": "/n-giph-api/static/js/runtime-main.61fb1afe.js",
+    "runtime-main.js.map": "/n-giph-api/static/js/runtime-main.61fb1afe.js.map",
+    "static/css/2.cda14bce.chunk.css": "/n-giph-api/static/css/2.cda14bce.chunk.css",
+    "static/js/2.ded4df5d.chunk.js": "/n-giph-api/static/js/2.ded4df5d.chunk.js",
+    "static/js/2.ded4df5d.chunk.js.map": "/n-giph-api/static/js/2.ded4df5d.chunk.js.map",
+    "index.html": "/n-giph-api/index.html",
+    "precache-manifest.5391ef3716cf4e1db4e6e5ec1bea731e.js": "/n-giph-api/precache-manifest.5391ef3716cf4e1db4e6e5ec1bea731e.js",
+    "service-worker.js": "/n-giph-api/service-worker.js",
+    "static/css/2.cda14bce.chunk.css.map": "/n-giph-api/static/css/2.cda14bce.chunk.css.map",
+    "static/css/main.ed7b92b7.chunk.css.map": "/n-giph-api/static/css/main.ed7b92b7.chunk.css.map",
+    "static/js/2.ded4df5d.chunk.js.LICENSE.txt": "/n-giph-api/static/js/2.ded4df5d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b8789e85.js",
+    "static/js/runtime-main.61fb1afe.js",
     "static/css/2.cda14bce.chunk.css",
-    "static/js/2.c804698b.chunk.js",
+    "static/js/2.ded4df5d.chunk.js",
     "static/css/main.ed7b92b7.chunk.css",
-    "static/js/main.e5a223ab.chunk.js"
+    "static/js/main.8ad3e8aa.chunk.js"
   ]
 }

@@ -1,51 +1,43 @@
 {
-  "name": "gif-app",
-  "homepage": "http://konstantin0s.github.io/n-giph-api",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.9.11",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/lab": "^4.0.0-alpha.50",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.19.2",
-    "dotenv": "^8.2.0",
-    "material-ui": "^0.20.2",
-    "react": "^16.12.0",
-    "react-animations": "^1.0.0",
-    "react-chartjs-2": "^2.8.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0",
-    "react-sharingbuttons": "^1.0.0",
-    "styled-components": "^5.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "resolutions": {
-    "react-dev-utils": "10.1.0"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "gif-app",
+	"homepage": "https://konstantin0s.github.io/n-giph-api",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@material-ui/core": "^4.9.11",
+		"@material-ui/icons": "^4.9.1",
+		"@material-ui/lab": "^4.0.0-alpha.50",
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.4.0",
+		"@testing-library/user-event": "^7.2.1",
+		"axios": "^0.19.2",
+		"dotenv": "^8.2.0",
+		"material-ui": "^0.20.2",
+		"react": "^16.12.0",
+		"react-animations": "^1.0.0",
+		"react-chartjs-2": "^2.8.0",
+		"react-dom": "^16.12.0",
+		"react-router-dom": "^5.1.2",
+		"react-scripts": "3.4.0",
+		"react-sharingbuttons": "^1.0.0",
+		"styled-components": "^5.1.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"resolutions": {
+		"react-dev-utils": "10.1.0"
+	},
+	"browserslist": {
+		"production": [ ">0.2%", "not dead", "not op_mini all" ],
+		"development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
+	}
 }
