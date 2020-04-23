@@ -10,7 +10,7 @@ import './css/header.css';
             <React.Fragment>
             <header className="header" id="masthead">
                 <nav className="links">
-                    <Link style={linkStyle} className="link" to="/">Home</Link>
+                    <Link style={linkStyle} className="link" to="/home">Home</Link>
                     <Link style={linkStyle} className="link" to="/giphy">Giphy</Link>
                 </nav>
             </header>
