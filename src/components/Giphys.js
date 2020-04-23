@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Gif from './Gif';
+import Loading from './Loading';
 import './css/gifs.css';
 require('dotenv');
 
@@ -84,7 +85,7 @@ require('dotenv');
             {
 
                     
-(this.state.isLoading) ? <p>Loading</p> : 
+(this.state.isLoading) ? <Loading /> : 
 
 
 this.state.giphy.filter(this.searchingFor(this.state.searchText)).map((gif) => (

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Gif from './Gif';
+import Loading from './Loading';
 import './css/home.css';
 
 class Home extends Component {
@@ -35,7 +36,9 @@ class Home extends Component {
         console.log(this.state.giphy);
         return (
             <div className="home">
-                {this.state.giphy.map((gif) => (
+                {
+                    this.state.isLoading ? <Loading /> :
+                this.state.giphy.map((gif) => (
                    <Gif key={gif.id} gif={gif} />
                 ))}
             </div>

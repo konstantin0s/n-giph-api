@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './css/Gif.css';
+import Loading from './Loading';
 
 class OneGif extends Component {
 constructor(props) {
@@ -44,7 +45,7 @@ delayRender = () => {
 )
     } else {
         return (
-            <p>Loading...</p>
+           <Loading />
         )
     }
 }
