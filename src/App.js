@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Giphys from './components/Giphys';
 import OneGif from './components/OneGif';
 import Home from './components/Home';
@@ -17,7 +17,8 @@ class App extends Component {
 <Router>
 <div className="App">
       <Header />
-      <Route exact path="/" component={Home} />
+   <Switch>
+   <Route exact path="/" component={Home} />
     <Route exact path="/giphy" component={Giphys} />
     <Route exact
         path="/gif/:id" 
@@ -27,6 +28,7 @@ class App extends Component {
           return <OneGif id={id} />;
         }}
       />
+     </Switch>
     <Footer />
             </div>
 </Router>
