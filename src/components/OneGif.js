@@ -33,7 +33,7 @@ matchGiph = () => {
 
     axios.get(`https://api.giphy.com/v1/gifs/${this.props.id}?api_key=${process.env.REACT_APP_API_KEY}`)
         .then(res => {
-            console.log(res.data.data);
+            // console.log(res.data.data);
           const gif = res.data.data;
           this.setState({ gif: gif,
             isLoading: false
@@ -48,8 +48,8 @@ componentDidMount() {
 
 
 delayRender = () => {
-    const { images, title, username, import_datetime, id  } = this.state.gif;
-    console.log(images, title, username);
+    const { images, title, import_datetime, id  } = this.state.gif;
+    // console.log(images, title, username);
     const { isLoading} = this.state;
     if (!isLoading) {
 
@@ -82,7 +82,7 @@ delayRender = () => {
 
 
     render() {
-        console.log(this.state.gif);
+        // console.log(this.state.gif);
 
         return (
             <div className="onegif">

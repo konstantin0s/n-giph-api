@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Gif from './Gif';
 import Loading from './Loading';
+// import GifSuggestion from './GifSuggestion';
 import './css/gifs.css';
 require('dotenv');
 
@@ -11,11 +12,39 @@ require('dotenv');
      
         this.state = {
           giphy: [],
-     searchText: '',
+     searchText: [],
+     term: [],
      isLoading: true
        }
      
       }
+
+      // suggestionSelected = (value) => {
+      //   this.setState({
+      //     term:value,
+      //     searchText: value
+      //   })
+      // }
+
+      // renderSuggestions = () => {
+      //   const { giphy } = this.state;
+
+      //   if (giphy.length === 0) {
+      //     return null;
+      //   } 
+      //   return (
+      //     <ul>
+      //   {this.state.giphy.filter(this.searchingFor(this.state.searchText)).map((gif) =>
+        
+      //       <li gif={gif} key={gif.id} onClick={() => this.suggestionSelected(gif)} > 
+      // {gif.title}
+      // </li>
+      
+      //       )}
+      //     </ul>
+      //   )
+      // }
+      
 
       searchingFor = term => {
         return (x) =>  {
@@ -29,6 +58,12 @@ require('dotenv');
             searchText: e.target.value,
             term: e.target.value
         });
+        if (e.target.value.length === 0) {
+          this.setState(() => ({
+            searchText: '',
+            term: ''
+          }))
+      } 
         console.log(e.target.value)
     }
 
@@ -49,7 +84,7 @@ require('dotenv');
 
     axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${process.env.REACT_APP_API_KEY}&limit=5`)
         .then(res => {
-            console.log(res.data.data);
+            // console.log(res.data.data);
           const giphy = res.data.data;
           this.setState({ giphy: giphy,
             isLoading: false
@@ -76,9 +111,10 @@ require('dotenv');
               placeholder="Enter Gif name"
               aria-label="Search"
             />
-
+              {/* {this.renderSuggestions()} */}
           <div className="search"></div>
         </form>
+
    </div>
 
             <div className="s-gifs">

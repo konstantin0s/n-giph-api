@@ -19,7 +19,7 @@ class Home extends Component {
 
         axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${process.env.REACT_APP_API_KEY}&limit=15`)
             .then(res => {
-                console.log(res.data.data);
+                // console.log(res.data.data);
               const giphy = res.data.data;
               this.setState({ giphy: giphy,
                 isLoading: false
@@ -34,7 +34,7 @@ class Home extends Component {
 
 
     render() {
-        console.log(this.state.giphy);
+        // console.log(this.state.giphy);
         return (
             <div className="home">
                 {
