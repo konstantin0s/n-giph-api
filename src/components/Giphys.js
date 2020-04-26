@@ -96,7 +96,7 @@ require('dotenv');
 
     render() {
 
-    console.log(this.state.giphy);
+    // console.log(this.state.giphy);
 
         return (
             <div className="container">
