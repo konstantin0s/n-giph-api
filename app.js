@@ -14,8 +14,8 @@ app.use(cors({
   'preflightContinue': false
 }));
 
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
+// app.set('view engine', 'hbs');
+// app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/build')));
 // ... other app.use middleware 
