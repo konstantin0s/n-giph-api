@@ -7,7 +7,7 @@ const apiUrl = process.env.API_URL;
 const apiKey = process.env.API_KEY;
 
 router.get('/', function (req, res, next) {
-    res.render('home');
+    res.json('/');
 });
 
 
