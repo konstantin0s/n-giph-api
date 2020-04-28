@@ -50,7 +50,7 @@ require('dotenv');
     
     searchhGiphs = (query) => {
 
-      axios.get(`/search?q=${query}&limit=8`)
+      axios.get(`${process.env.REACT_APP_API_URL}/search?q=${query}&limit=8`)
           .then(res => {
               // console.log(res.data.data);
             const giphy = res.data;
