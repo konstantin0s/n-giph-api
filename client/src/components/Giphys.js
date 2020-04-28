@@ -33,12 +33,6 @@ require('dotenv');
             searchText: e.target.value,
             term: e.target.value
         });
-      //   if (e.target.value.length === 0) {
-      //     this.setState(() => ({
-      //       searchText: [],
-      //       term: []
-      //     }))
-      // } 
         console.log(e.target.value)
     }
 
@@ -54,45 +48,44 @@ require('dotenv');
     
     }
     
+    searchhGiphs = (query) => {
 
-
- searchhGiphs = (query) => {
-
-    axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${process.env.REACT_APP_API_KEY}&limit=5`)
-        .then(res => {
-            // console.log(res.data.data);
-          const giphy = res.data.data;
-          this.setState({ giphy: giphy,
-            isLoading: false
-        });   
-        })
-        .catch(err => console.log(err));
-}
-
-selectedText = (value) => {
-  this.setState(() => ({
-      searchText: [],
-      term: value
-  }))
-}
-
-
-renderSuggestions = () => {
-let {giphy, searchText, term } = this.state;
-if (searchText.length === 0) {
-    return null;
-}
-return (
-    <ul>
-     { giphy.filter(this.searchingFor(term)).map((gif) => (
-          <li key={gif.id} onClick={() => this.selectedText(gif.title)}>
-              {gif.title}
-          </li>
-    
-      ) )}
-    </ul>
-)
-}
+      axios.get(`/search?q=${query}&limit=8`)
+          .then(res => {
+              // console.log(res.data.data);
+            const giphy = res.data;
+            this.setState({ giphy: giphy,
+              isLoading: false
+          });   
+          })
+          .catch(err => console.log(err));
+  }
+  
+  selectedText = (value) => {
+    this.setState(() => ({
+        searchText: value,
+        term: ''
+    }))
+  }
+  
+  
+  renderSuggestions = () => {
+  let {giphy, term, searchText } = this.state;
+  if (term.length === 0) {
+      return null;
+  }
+  return (
+      <ul className="ul">
+       { giphy.filter(this.searchingFor(term)).map((gif) => (
+            <li className="li" key={gif.id} onClick={() => this.selectedText(gif.title)}>
+                {gif.title}
+            </li>
+        ) )}
+      </ul>
+  
+  )
+  }
+  
 
 
     render() {
@@ -112,12 +105,12 @@ return (
               placeholder="Enter Gif name"
               aria-label="Search"
             />
-              {/* {this.renderSuggestions()} */}
+
           <div className="search"></div>
         </form>
 
    </div>
-
+   {this.renderSuggestions()}
             <div className="s-gifs">
             {
 

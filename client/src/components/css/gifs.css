@@ -148,7 +148,7 @@ input::placeholder {
 }
 
 /* autocomplete */
-li {
+.li {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.5);
     background-image:
@@ -167,7 +167,7 @@ li {
     border-radius: 3px;
 }
 
-ul {
+.ul {
     margin: 0 auto;
     padding: 0;
     max-height: 390px;
@@ -177,5 +177,5 @@ ul {
     border-left: none;
     border-right: none;
     position: relative;
-    top: 164px;
+    top: 20px;
 }

@@ -11,16 +11,16 @@ class Home extends Component {
      
         this.state = {
           giphy: [],
-     isLoading: true
+          isLoading: true
        }
       }
 
       listGiphs = (query = 'princess') => {
 
-        axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${process.env.REACT_APP_API_KEY}&limit=15`)
+        axios.get(`/search?q=${query}`)
             .then(res => {
                 // console.log(res.data.data);
-              const giphy = res.data.data;
+              const giphy = res.data;
               this.setState({ giphy: giphy,
                 isLoading: false
             });   
