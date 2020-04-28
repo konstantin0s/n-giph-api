@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Gif from './Gif';
 import Loading from './Loading';
-// import GifSuggestion from './GifSuggestion';
 import './css/gifs.css';
 require('dotenv');
 
@@ -12,38 +11,14 @@ require('dotenv');
      
         this.state = {
           giphy: [],
-     searchText: [],
-     term: [],
-     isLoading: true
+          searchText: [],
+          term: '',
+          isLoading: true
        }
      
       }
 
-      // suggestionSelected = (value) => {
-      //   this.setState({
-      //     term:value,
-      //     searchText: value
-      //   })
-      // }
 
-      // renderSuggestions = () => {
-      //   const { giphy } = this.state;
-
-      //   if (giphy.length === 0) {
-      //     return null;
-      //   } 
-      //   return (
-      //     <ul>
-      //   {this.state.giphy.filter(this.searchingFor(this.state.searchText)).map((gif) =>
-        
-      //       <li gif={gif} key={gif.id} onClick={() => this.suggestionSelected(gif)} > 
-      // {gif.title}
-      // </li>
-      
-      //       )}
-      //     </ul>
-      //   )
-      // }
       
 
       searchingFor = term => {
@@ -58,12 +33,12 @@ require('dotenv');
             searchText: e.target.value,
             term: e.target.value
         });
-        if (e.target.value.length === 0) {
-          this.setState(() => ({
-            searchText: '',
-            term: ''
-          }))
-      } 
+      //   if (e.target.value.length === 0) {
+      //     this.setState(() => ({
+      //       searchText: [],
+      //       term: []
+      //     }))
+      // } 
         console.log(e.target.value)
     }
 
@@ -71,6 +46,7 @@ require('dotenv');
         e.preventDefault();
         this.searchhGiphs(this.query.value);
         e.currentTarget.reset();
+        this.setState({ searchText: [], term: '' });
     }
 
     componentDidMount = () => {
@@ -91,6 +67,31 @@ require('dotenv');
         });   
         })
         .catch(err => console.log(err));
+}
+
+selectedText = (value) => {
+  this.setState(() => ({
+      searchText: [],
+      term: value
+  }))
+}
+
+
+renderSuggestions = () => {
+let {giphy, searchText, term } = this.state;
+if (searchText.length === 0) {
+    return null;
+}
+return (
+    <ul>
+     { giphy.filter(this.searchingFor(term)).map((gif) => (
+          <li key={gif.id} onClick={() => this.selectedText(gif.title)}>
+              {gif.title}
+          </li>
+    
+      ) )}
+    </ul>
+)
 }
 
 
