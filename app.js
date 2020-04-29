@@ -15,15 +15,15 @@ app.use(cors({
 }));
 
 
-app.use(bodyParser.urlencoded({
-    extended: false
-  }));
+// app.use(bodyParser.urlencoded({
+//     extended: false
+//   }));
   app.use(bodyParser.json());
-app.use(cors({
-  credentials: true,
-  origin: ['https://figif.herokuapp.com']
-})
-);
+// app.use(cors({
+//   credentials: true,
+//   origin: ['https://figif.herokuapp.com']
+// })
+// );
 
 app.use(
   bodyParser.urlencoded({
@@ -37,11 +37,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/build')));
 // ... other app.use middleware 
   
-  // app.use(function(req, res, next) {
-  //     res.header("Access-Control-Allow-Origin", "*");
-  //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  //     next();
-  //   });
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
   
   const gif = require('./routes/gif');
     app.use('/', gif);
