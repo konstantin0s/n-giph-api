@@ -88,6 +88,7 @@ input[type=search] {
 .MuiButton-label a {
     text-decoration: none;
 }
+
 .MuiButton-label a:hover {
     text-decoration: none;
     color: #fff;
@@ -102,4 +103,10 @@ input[type=search] {
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+.onegif img {
+    width: 63%;
+    height: 450px;
+    position: relative;
 }
