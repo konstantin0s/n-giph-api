@@ -6,20 +6,19 @@ const bodyParser = require('body-parser');
 const app = express();
 
 //enables cors
-// app.use(cors({
-//   'allowedHeaders': ['sessionId', 'Content-Type'],
-//   'exposedHeaders': ['sessionId'],
-//   'origin': '*',
-//   'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//   'preflightContinue': false
-// }));
+app.use(cors({
+  'allowedHeaders': ['sessionId', 'Content-Type'],
+  'exposedHeaders': ['sessionId'],
+  'origin': '*',
+  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  'preflightContinue': false
+}));
 
 
 app.use(bodyParser.urlencoded({
     extended: false
   }));
   app.use(bodyParser.json());
-  app.use(express.json());
 app.use(cors({
   credentials: true,
   origin: ['https://figif.herokuapp.com']
