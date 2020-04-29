@@ -6,13 +6,13 @@ const bodyParser = require('body-parser');
 const app = express();
 
 //enables cors
-app.use(cors({
-  'allowedHeaders': ['sessionId', 'Content-Type'],
-  'exposedHeaders': ['sessionId'],
-  'origin': '*',
-  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  'preflightContinue': false
-}));
+// app.use(cors({
+//   'allowedHeaders': ['sessionId', 'Content-Type'],
+//   'exposedHeaders': ['sessionId'],
+//   'origin': '*',
+//   'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   'preflightContinue': false
+// }));
 
 // app.set('view engine', 'hbs');
 // app.set('views', __dirname + '/views');
@@ -43,13 +43,13 @@ app.use(bodyParser.urlencoded({
   
     
     // error handler
-  app.use(function(err, req, res, next) {
-      // set locals, only providing error in development
-      res.locals.message = err.message;
-      res.locals.error = req.app.get('env') === 'development' ? err : {};
+  // app.use(function(err, req, res, next) {
+  //     // set locals, only providing error in development
+  //     res.locals.message = err.message;
+  //     res.locals.error = req.app.get('env') === 'development' ? err : {};
     
-      res.status(err.status || 500);
-    });
+  //     res.status(err.status || 500);
+  //   });
 
 
         // Set static folder
