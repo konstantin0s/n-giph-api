@@ -5,3 +5,7 @@
 3. Add .env file into root folder with gif api key ( your own app key).
 4. From root folder, run:  
 ~ npm run dev   
+
+
+The app can bee seen online at: 
+https://figif.herokuapp.com/
