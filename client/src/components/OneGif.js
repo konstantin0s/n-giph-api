@@ -31,10 +31,10 @@ constructor(props) {
 
 matchGiph = () => {
 
-    axios.get(`https://api.giphy.com/v1/gifs/${this.props.id}?api_key=${process.env.REACT_APP_API_KEY}`)
+    axios.get(`/gif/${this.props.id}`)
         .then(res => {
             // console.log(res.data.data);
-          const gif = res.data.data;
+          const gif = res.data;
           this.setState({ gif: gif,
             isLoading: false
         });   

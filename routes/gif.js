@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const apiUrl = process.env.API_URL;
 const apiKey = process.env.API_KEY;
+const oneGifUrl = 'https://api.giphy.com/v1/gifs';
 
 //get all gif by name
 
@@ -24,9 +25,29 @@ router.get('/search', function (req, res, next) {
     // res.send(response.data);
     var body = response.data.data;
     res.json(body);
-    console.log(body)
+    // console.log(body)
     // res.render('locations', {body: body})
   })
+});
+
+//Search beers by id
+router.get('/gif/:id', function (req, res, next) {
+  const options = {
+    params: {
+      key: apiKey
+    },
+    withCredentials: true
+  }
+  axios.get(`${oneGifUrl}/${req.params.id}`, options).then(function (response) {
+      // res.send(response.data);
+      // var body = response.data;
+      var body = response.data.data;
+      console.log(response.data);
+      res.json(body);
+    })
+    .catch(function (error) {
+      res.status(404).send();
+    });
 });
 
 module.exports = router;
