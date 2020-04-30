@@ -10,6 +10,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Sharing from './Sharing';
+import ReactFancyBox from 'react-fancybox'
+import 'react-fancybox/lib/fancybox.css'
 
 const useStyles = makeStyles({
     root: {
@@ -56,7 +58,11 @@ delayRender = () => {
     return (
     <Card className={useStyles.root}>
     <CardActionArea>
-      <img alt="gifff" src={images.downsized_large.url} />
+      {/* <img alt="gifff" src={images.downsized_large.url} /> */}
+      <ReactFancyBox
+      defaultThumbnailWidth='700'
+          thumbnail={images.downsized_large.url}
+          image={images.downsized_large.url} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="h2">
           {title}
