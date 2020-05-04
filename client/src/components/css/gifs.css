@@ -8,9 +8,17 @@
     position: relative;
     top: 100px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     margin-bottom: 100px;
+}
+
+.box .image-box {
+    width: 400px;
+}
+
+.box .image-box img:not(.close-btn) {
+    width: 100%;
 }
 
 .contain-form {

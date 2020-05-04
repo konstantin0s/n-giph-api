@@ -10,7 +10,7 @@
 }
 
 .child-gif img {
-    width: 240px;
+    width: 345px;
     height: 240px;
 }
 
@@ -23,6 +23,15 @@
     top: 60px;
     margin-bottom: 100px;
 }
+
+.box .image-box {
+    width: 800px;
+}
+
+.box .image-box img:not(.close-btn) {
+    width: 100%;
+}
+
 
 li {
     list-style: none;
