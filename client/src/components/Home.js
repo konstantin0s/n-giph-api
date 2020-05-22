@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Gif from './Gif';
 import Loading from './Loading';
+import BackgroundC from './BackgroundC';
 import './css/home.css';
 
 
@@ -36,13 +37,17 @@ class Home extends Component {
     render() {
         // console.log(this.state.giphy);
         return (
+            <React.Fragment>
+                     <BackgroundC />
             <div className="home">
+              
                 {
                     this.state.isLoading ? <Loading /> :
                 this.state.giphy.map((gif) => (
                    <Gif key={gif.id} gif={gif} />
                 ))}
             </div>
+            </React.Fragment>
         )
     }
 }

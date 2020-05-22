@@ -4,14 +4,29 @@
     --sec-color: #f1d455;
 }
 
+li {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 .child-gif {
     position: relative;
-    left: 1.5em;
+    /* left: 1.5em; */
+    margin-bottom: 1em;
+    display: inline-block;
 }
 
 .child-gif img {
     width: 345px;
     height: 240px;
+}
+
+.s-gifs .box .image-box {
+    width: 65%;
+    height: 400px;
 }
 
 .child-gif h3 {
@@ -32,14 +47,6 @@
     width: 100%;
 }
 
-
-li {
-    list-style: none;
-}
-
-* {
-    box-sizing: border-box;
-}
 
 input[type=search] {
     width: 40%;
@@ -118,4 +125,114 @@ input[type=search] {
     width: 63%;
     height: 450px;
     position: relative;
+}
+
+
+@media (min-width: 300px) and (max-width: 550px) {
+    .box .image-box {
+        width: 90%px;
+    }
+
+    .App .home {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .home .child-gif {
+        margin-bottom: 1em;
+    }
+
+    .home .child-gif .makeStyles-root-1 {
+        width: 100% !important;
+    }
+
+    .child-gif img {
+        width: 100%;
+        height: 240px;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 767px) {
+    .box .image-box {
+        width: 90%px;
+    }
+
+    .App .home {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+
+    .home .child-gif {
+        width: 95%;
+        margin-bottom: 1em;
+        margin-left: 0.5em;
+        margin-right: 0.2em;
+    }
+
+    .home .box .image-box {
+        width: 75%;
+    }
+
+    .child-gif img {
+        width: 100%;
+        height: 240px;
+    }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .box .image-box {
+        width: 90%px;
+    }
+
+    .App .home {
+        grid-template-columns: repeat(2, 47%);
+        grid-gap: 5px;
+        left: 1em;
+    }
+
+    .home .child-gif {
+        width: 95%;
+        margin-bottom: 1em;
+        margin-left: 0.5em;
+        margin-right: 0.2em;
+    }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    .box .image-box {
+        width: 90%px;
+    }
+
+    .App .home {
+        grid-template-columns: repeat(3, 32%);
+        grid-gap: 5px;
+        left: 1em;
+    }
+
+    .home .child-gif {
+        width: 95%;
+        margin-bottom: 1em;
+        margin-left: 0.5em;
+        margin-right: 0.2em;
+    }
+}
+
+
+@media screen and (min-width:1025px) and (max-width: 1400px) {
+    .App .home {
+        grid-template-columns: repeat(4, 24%);
+        left: 0px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width:1401px) {
+
+    .App .home {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+    }
 }

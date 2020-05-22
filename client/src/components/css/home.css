@@ -1,8 +1,9 @@
 .home {
     position: relative;
-    top: 100px;
+    top: 10px;
     margin-bottom: 120px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 25%);
     grid-gap: 10px;
+    text-align: center;
 }

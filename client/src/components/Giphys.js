@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Gif from './Gif';
 import Loading from './Loading';
+import BackgroundC from './BackgroundC';
 import './css/gifs.css';
 require('dotenv');
 
@@ -93,8 +94,10 @@ require('dotenv');
     // console.log(this.state.giphy);
 
         return (
-            <div className="container">
 
+<React.Fragment>
+<BackgroundC />
+            <div className="contain">
 <div className="contain-form">
    <form className="search-form" onSubmit={this.handleSubmit}>
  
@@ -126,6 +129,7 @@ this.state.giphy.filter(this.searchingFor(this.state.searchText)).map((gif) => (
             </div>
      
             </div>
+</React.Fragment>
         )
     }
 }

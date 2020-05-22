@@ -38,7 +38,7 @@ const useStyles = makeStyles({
                 image={props.gif.images.downsized_large.url} />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {props.gif.title}
+              {props.gif.title.slice(0,15)}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
            {props.gif.username}
