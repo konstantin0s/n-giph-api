@@ -71,7 +71,7 @@ require('dotenv');
   
   
   renderSuggestions = () => {
-  let {giphy, term, searchText } = this.state;
+  let {giphy, term } = this.state;
   if (term.length === 0) {
       return null;
   }
