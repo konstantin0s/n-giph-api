@@ -13,7 +13,7 @@ const Footer =() => {
            </a>
     </p>
      
-          <p className="text-center"> 2020 Copyright © Gifix </p>
+          <p className="text-center"> {new Date().getFullYear()} Copyright © Gifix </p>
        
       </div>
     </div>
