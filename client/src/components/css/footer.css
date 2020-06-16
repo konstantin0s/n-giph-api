@@ -32,12 +32,12 @@ html {
     background: #333;
     color: white;
     padding: 10px;
-    bottom: -20px;
+    bottom: 0px;
     left: 0;
     width: 100%;
     text-align: center;
     z-index: 120;
-    position: relative;
+    position: fixed;
     height: 5em;
 }
 

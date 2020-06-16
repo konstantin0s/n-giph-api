@@ -2,12 +2,13 @@
     position: relative;
     width: 100%;
     height: 100%;
-    display: inline-block;
+    text-align: center;
+    /* display: inline-block; */
 }
 
 .s-gifs {
     position: relative;
-    top: -100px;
+    top: 200px;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-gap: 10px;
@@ -161,10 +162,10 @@ input::placeholder {
     box-sizing: border-box;
     cursor: pointer;
     border-radius: 3px;
+    color: #fff;
 }
 
 .ul {
-    margin: 0 auto;
     padding: 0;
     max-height: 390px;
     overflow-y: auto;
@@ -172,8 +173,13 @@ input::placeholder {
     padding: 5px 5px 0 5px;
     border-left: none;
     border-right: none;
-    position: relative;
-    top: 20px;
+    position: absolute;
+    top: -155px;
+    margin: 0 4em;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 160px;
 }
 
 @media (min-width: 300px) and (max-width: 549px) {
