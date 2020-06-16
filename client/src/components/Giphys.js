@@ -53,7 +53,7 @@ require('dotenv');
 
       axios.get(`/search?q=${query}&limit=8`)
           .then(res => {
-              console.log(res.data);
+              // console.log(res.data);
             const giphy = res.data;
             this.setState({ giphy: giphy,
               isLoading: false

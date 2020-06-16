@@ -29,11 +29,7 @@ const useStyles = makeStyles({
         <div className="child-gif">
       <Card className={classes.root}>
         <CardActionArea>
-          {/* <CardMedia
-            className={classes.media}
-            image={props.gif.images.downsized_large.url}
-            title="alagif"
-          /> */}
+
                <ReactFancyBox className={classes.media} thumbnail={props.gif.images.downsized_large.url}
                 image={props.gif.images.downsized_large.url} />
           <CardContent>

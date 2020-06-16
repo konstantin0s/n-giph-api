@@ -35,7 +35,7 @@ matchGiph = () => {
 
     axios.get(`/gif/${this.props.id}`)
         .then(res => {
-            // console.log(res.data.data);
+            // console.log(res.data);
           const gif = res.data;
           this.setState({ gif: gif,
             isLoading: false
@@ -50,7 +50,7 @@ componentDidMount() {
 
 
 delayRender = () => {
-    const { images, title, import_datetime, id  } = this.state.gif;
+    const { images, title, import_datetime, id, source_post_url  } = this.state.gif;
     // console.log(images, title, username);
     const { isLoading} = this.state;
     if (!isLoading) {
@@ -58,9 +58,7 @@ delayRender = () => {
     return (
     <Card className={useStyles.root}>
     <CardActionArea>
-      {/* <img alt="gifff" src={images.downsized_large.url} /> */}
       <ReactFancyBox
-      defaultThumbnailWidth='700'
           thumbnail={images.downsized_large.url}
           image={images.downsized_large.url} />
       <CardContent>
@@ -70,9 +68,13 @@ delayRender = () => {
         <Typography variant="body2" color="textSecondary" component="p">
        {import_datetime}
         </Typography>
+  
       </CardContent>
     </CardActionArea>
     <CardActions>
+    <Button size="small" color="primary">
+ <a href={source_post_url} target="_blank" >Source </a>
+      </Button>
       <Button size="small" color="primary">
 <Sharing id={ id } />
       </Button>

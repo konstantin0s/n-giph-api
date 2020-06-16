@@ -2,15 +2,15 @@
     position: relative;
     top: 60px;
     margin-bottom: 226px;
-    width: 75%;
+    width: 70%;
     display: inline-block;
 }
 
-.box .image-box {
-    width: 100%;
+.one-gif .box .image-box {
+    width: 80%;
 }
 
-.box .image-box img:not(.close-btn) {
+.onegif .box .image-box img:not(.close-btn) {
     width: 100%;
 }
 
