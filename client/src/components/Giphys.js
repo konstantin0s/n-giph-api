@@ -49,7 +49,7 @@ require('dotenv');
     
     }
     
-    searchhGiphs = (query = 'girl') => {
+    searchhGiphs = (query) => {
 
       axios.get(`/search?q=${query}&limit=8`)
           .then(res => {
