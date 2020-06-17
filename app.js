@@ -19,11 +19,11 @@ app.use(cors({
 //     extended: false
 //   }));
   app.use(bodyParser.json());
-// app.use(cors({
-//   credentials: true,
-//   origin: ['https://figif.herokuapp.com']
-// })
-// );
+app.use(cors({
+  credentials: true,
+  origin: ['https://figif.herokuapp.com']
+})
+);
 
 app.use(
   bodyParser.urlencoded({
