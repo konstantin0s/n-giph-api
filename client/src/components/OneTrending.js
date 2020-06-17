@@ -22,11 +22,11 @@ const useStyles = makeStyles({
     },
   });
 
-class OneGif extends Component {
+class OneTrending extends Component {
 constructor(props) {
     super(props);
     this.state = {
-        gif: [],
+        trending: [],
         isLoading: true
     }
 }
@@ -35,9 +35,9 @@ matchGiph = () => {
 
     axios.get(`/gif/${this.props.id}`)
         .then(res => {
-            // console.log(res.data);
-          const gif = res.data;
-          this.setState({ gif: gif,
+            console.log(res.data);
+          const trending = res.data;
+          this.setState({ trending,
             isLoading: false
         });   
         })
@@ -50,7 +50,7 @@ componentDidMount() {
 
 
 delayRender = () => {
-    const { images, title, import_datetime, id, source_post_url  } = this.state.gif;
+    const { images, title, import_datetime, id, source_post_url  } = this.state.trending;
     // console.log(images, title, username);
     const { isLoading} = this.state;
     if (!isLoading) {
@@ -73,7 +73,7 @@ delayRender = () => {
     </CardActionArea>
     <CardActions>
     <Button size="small" color="primary">
- <a href={source_post_url} target="_blank" rel="noopener noreferrer">Source </a>
+ <a href={source_post_url} target="_blank"  rel="noopener noreferrer">Source </a>
       </Button>
       <Button size="small" color="primary">
 <Sharing id={ id } />
@@ -100,4 +100,4 @@ delayRender = () => {
     }
 }
 
-export default OneGif;
+export default OneTrending;

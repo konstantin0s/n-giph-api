@@ -12,6 +12,7 @@ import './css/header.css';
                 <nav className="links">
                     <Link style={linkStyle} className="link" to="/">Home</Link>
                     <Link style={linkStyle} className="link" to="/giphy">Giphy</Link>
+                    <Link style={linkStyle} className="link" to="/trendings">Trendings</Link>
                 </nav>
             </header>
         </React.Fragment>

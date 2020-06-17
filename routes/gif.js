@@ -21,7 +21,7 @@ router.get('/search', function (req, res) {
         },
         withCredentials: true
     };
-    let queryString = 'princess'
+
     axios
         .get(`${apiUrl}`, options)
         .then(function (response) {
@@ -30,9 +30,10 @@ router.get('/search', function (req, res) {
             res.json(body);
             // console.log(body) res.render('locations', {body: body})
         })
+        .catch(err => console.log(err));
 });
 
-//Search beers by id
+//Search gif by id
 router.get('/gif/:id', function (req, res) {
     const options = {
         params: {
@@ -77,6 +78,10 @@ router.get('/daily', function (req, res) {
             console.log(body)
             // res.render('locations', {body: body})
         })
+        .catch(err => console.log(err));
 });
+
+//get one  trendinggif
+// {it goes to gif:id route and it renders one }
 
 module.exports = router;
