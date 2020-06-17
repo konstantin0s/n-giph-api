@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     const classes = useStyles();
 
     return (
-        <div className="child-gif">
+        <div className="child-trending">
       <Card className={classes.root}>
         <CardActionArea>
 

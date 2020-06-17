@@ -19,6 +19,14 @@ li {
     display: inline-block;
 }
 
+
+.child-trending {
+    position: relative;
+    top: -169px;
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
 .child-gif img {
     width: 345px;
     height: 240px;
