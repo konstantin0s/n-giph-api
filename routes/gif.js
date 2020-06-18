@@ -5,9 +5,42 @@ require('dotenv').config();
 
 const apiUrl = process.env.API_URL;
 const apiKey = process.env.API_KEY;
+const uploadUrl= process.env.UPLOAD_URL;
 const oneGifUrl = 'https://api.giphy.com/v1/gifs';
 const trendUrl = 'https://api.giphy.com/v1/gifs/trending';
 
+// function Movie(title, description, image) {
+//     this.title = title;
+//     this.description = description;
+//     this.image = image;
+// }
+
+//upload via  POST route
+router.post('/add', (req, res) => {
+    debugger
+    const options = {
+        params: {
+            key: apiKey,
+            title: req.body.title,
+            description: req.body.description,
+            image: req.body.image
+        },
+        withCredentials: true
+    };
+    axios
+    .put(`${uploadUrl}`, options)
+    .then(function (response) {
+        console.log(response) 
+        // res.send(response.data);
+        var body = response.data;
+        res.json(body);
+        console.log(body) 
+    })
+     .catch(err => {
+      debugger
+      res.json(err);
+      })
+  });
 //get all gif by name
 
 router.get('/search', function (req, res) {

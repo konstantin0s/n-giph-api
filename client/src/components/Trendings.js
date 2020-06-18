@@ -19,30 +19,6 @@ require('dotenv');
      
       }
 
-
-  
-    //   searchingFor = term => {
-    //     return (x) =>  {
-    //       return x.title.includes(term) || !term;
-    //     }
-    //   }
-
-    //   onSearchChange = e => {
-    //     this.searchhTrending(this.query.value);
-    //     this.setState({
-    //         searchText: e.target.value,
-    //         term: e.target.value
-    //     });
-    //     // console.log(e.target.value)
-    // }
-
-    // handleSubmit = e => {
-    //     e.preventDefault();
-    //     this.searchhTrending(this.query.value);
-    //     e.currentTarget.reset();
-    //     this.setState({ searchText: [], term: '' });
-    // }
-
     componentDidMount = () => {
         this.searchhTrending();
     
@@ -60,15 +36,6 @@ require('dotenv');
           })
           .catch(err => console.log(err));
   }
-  
-  // selectedText = (value) => {
-  //   this.setState(() => ({
-  //       searchText: value,
-  //       term: ''
-  //   }))
-  // }
-
-
 
     render() {
 
