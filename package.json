@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/konstantin0s/n-giph-api#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "co": "^4.6.0",
     "concurrently": "^5.2.0",
     "cookie-parser": "^1.4.5",
